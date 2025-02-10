@@ -43,7 +43,7 @@ body {
     cursor: pointer;
 }
 
-/* Carousel Styles */
+/* section1 */
 .carousel-container {
     width: 100%;
     max-width: 1428px;
@@ -66,7 +66,7 @@ body {
     flex-shrink: 0;
 }
 
-/* Navigation Styles */
+/* section2 */
 .navigation-wrapper {
     display: flex;
     align-items: center;
@@ -100,7 +100,7 @@ body {
 .dot.active {
     background-color: #673ab7;
 }
-/* section3 */
+/* section4 */
 .element-container{
     width: 1428px;
     height: 822px;
@@ -222,7 +222,7 @@ h2 {
     font-size: 0.9rem;
     line-height: 1.4;
 }
-
+/* section6 */
 .footer{
     background-color: #151D35;
     margin-top: 20px;
@@ -344,7 +344,7 @@ h2 {
     background-color:#151D35 ;
     color:#ffffff
 }
-
+/* section3 */
 .section3{
     background: linear-gradient(-45deg, #03C1F3,#008DCF, #34DDFF,#34DDFF,#43B8F5,#5FFFBC);
     width: 1428px;
@@ -379,4 +379,39 @@ h2 {
 
 #probest{
     color:#3995b1;
+}
+
+
+@keyframes popFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state for animated elements */
+.animate {
+    opacity: 0;
+}
+
+/* Animation class */
+.pop-up {
+    animation: popFromBottom 0.8s ease forwards;
+}
+
+/* Animation delays for sequential animations */
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-600 {
+    animation-delay: 600ms;
 }
