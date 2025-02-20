@@ -1,3 +1,4 @@
+// Carousel functionality
 const track = document.getElementById("track");
 const slides = document.querySelectorAll(".carousel-track img");
 const totalSlides = slides.length;
@@ -56,3 +57,33 @@ function resetAutoplay() {
 
 // Ensure the track width is large enough for all images
 track.style.width = `${totalSlides * 1428}px`;
+
+// FAQ Accordion functionality
+const allQuestions = document.querySelectorAll('.ques');
+
+allQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+        // Remove active class from all questions except the clicked one
+        allQuestions.forEach(q => {
+            if (q !== question) {
+                q.classList.remove('active');
+            }
+        });
+        
+        // Toggle active class on clicked question
+        this.classList.toggle('active');
+    });
+});
+
+function toggleFAQ(element) {
+    let answer = element.nextElementSibling;
+    let arrow = element.querySelector('.arrow');
+
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+        arrow.style.transform = "rotate(0deg)";
+    } else {
+        answer.style.display = "block";
+        arrow.style.transform = "rotate(180deg)";
+    }
+}

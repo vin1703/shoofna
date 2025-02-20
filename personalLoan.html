@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ploan.css">
+    <script src="https://kit.fontawesome.com/e9bd02e90d.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -35,6 +36,7 @@
             </div>
             <div class="bottom-left">
                 <button class="apply-btn">Apply Now</button>
+                <button class="apply-btn">Download</button>
             </div>
             
         </div>
@@ -75,7 +77,7 @@
         </ul>
         <h1>Documents required to apply for Personal Loan</h1>
         <ul>
-            <li><span class="list-text">IdentityProff</span> - Passport, Voters's ID, Driving License, PAN card, Aadhaar Card</li>
+            <li><span class="list-text">IdentityProof</span> - Passport, Voters's ID, Driving License, PAN card, Aadhaar Card</li>
             <li><span class="list-text">Proof of Residence or Address Proof</span> - Passport, Voter's ID, Driving License,PAN Card, Aadhaar Card,Electricity Bill, Telephone Bill, Ration Card</li>
            <li><span class="list-text">Age Proof</span> - Passport, Voter's ID, Driving License, PAN Card, Aadhaar Card</li>
         </ul>
@@ -84,37 +86,54 @@
         <p>Last 6 month's Salary Slips(latest)</p>
         <p>Last 6 month's Bank Statement (Till Date)</p>
         <p>Form 16</p>
-        <p>Loan statement for any runnign loans(Last 1 Year)</p>
+        <p>Loan statement for any running loans(Last 1 Year)</p>
         <p>Employment Certificate/Office Address Proof</p>
         <h4>Recent Passport size Photographs</h4>
     </div>
     <div class="qna">
         <h1>Personal Loan FAQ's</h1>
-        <div class="ques">
-            <p class="ques-text">What is a personal loan ?</p>
+    
+        <div class="ques" onclick="toggleFAQ(this)">
+            <span class="ques-text">What is a Personal Loan?</span>
+            <span class="arrow">▼</span>
         </div>
-        <div class="ques">
-            <p class="ques-text">How do I qualify for a Personal Loan?</p>
+        <div class="answer">answer</div>
+        <div class="ques" onclick="toggleFAQ(this)">
+            <span class="ques-text">How do I qualify for a Personal Loan?</span>
+            <span class="arrow">▼</span>
         </div>
-        <div class="ques">
-            <p class="ques-text">Can I prepay my home loan ?</p>
+        <div class="answer">answer</div>
+        <div class="ques" onclick="toggleFAQ(this)">
+            <span class="ques-text">Is it Possible to secure a 100% home loan from a bank?</span>
+            <span class="arrow">▼</span>
         </div>
-        <div class="ques">
-            <p class="ques-text">Is is possible to secure 100% home loan from a bank ?</p>
+        <div class="answer">answer</div>
+        <div class="ques" onclick="toggleFAQ(this)">
+            <span class="ques-text">What is the maximum home loan that I can get?</span>
+            <span class="arrow">▼</span>
         </div>
-        <div class="ques">
-            <p class="ques-text">What is the maximum home loan that I can get ?</p>
+        <div class="answer">answer</div>
+    
+        <div class="ques" onclick="toggleFAQ(this)">
+            <span class="ques-text">What documentation is required for salaried professionas applying for home loan?</span>
+            <span class="arrow">▼</span>
         </div>
-        <div class="ques">
-            <p class="ques-text">What documentation is required for salaried professionals applying for a home loan ?</p>
+        <div class="answer">answer</div>
+    
+        <div class="ques" onclick="toggleFAQ(this)">
+            <span class="ques-text">Can I apply for a home loan jointly with a friend or family member?</span>
+            <span class="arrow">▼</span>
         </div>
-        <div class="ques">
-            <p class="ques-text">Can I apply for a home loan jointly with a friend or family member ?</p>
+        <div class="answer">answer</div>
+
+        <div class="ques" onclick="toggleFAQ(this)">
+            <span class="ques-text">Who can be joint borrowers in a Home Loan?</span>
+            <span class="arrow">▼</span>
         </div>
-        <div class="ques">
-            <p class="ques-text">Who can be joint borrowers in a Home Loan ?</p>
-        </div>
+        <div class="answer">answer</div>
     </div>
+    
+
     <div class="footer">
         <div class="footer-wrapper">
             <div class="first">
@@ -193,5 +212,6 @@
      <div class="last">
         <p>Copyright by Shoofna Revolution India Ltd &copy; 2024. All rights reserved</p>
      </div>
+     <script src="script.js"></script>
 </body>
 </html>
