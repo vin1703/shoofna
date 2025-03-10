@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="emi.css">
+    <script src="https://kit.fontawesome.com/e9bd02e90d.js" crossorigin="anonymous"></script>
+    <title>EMI-Calculator</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img id="img-logo" src="assets/logo.png" alt="logo">
+        </div>
+        <div class="nav-container">
+            <span>Home</span>
+            <span>About Us</span>
+            <span><a style="text-decoration: none;color: inherit;" href="personalLoan.html">Services</a></span>
+            <span>Career</span>
+            <span>Contacts</span>
+        </div>
+        <div class="download-container">
+            <div class="login">Login</div>
+            <img id="img-download" src="assets/download.png" alt="download">
+            <img id="img-qr" src="assets/qr.png" alt="qr">
+        </div>
+    </div>
+    <div class="banner">
+        <h1>EMI Calculator</h1>
+        <p>calculate your emi for different interest rates,loan amounts and loan tenures,using Andromeda's calculator</p>
+    </div>
+    <div class="calc">
+        <div class="left-calc">
+            <!-- Loan Amount -->
+            <div class="left-sec">
+                <div class="first-left-sec">
+                    <label class="loan-label">Loan Amount (₹)</label>
+                    <input type="text" id="loan_amount" value="5050000" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="8" class="ms-2">
+                </div>
+                <div class="sec-left-sec">
+                    <input type="range" class="loan-amount" value="5050000" min="100000" max="10000000" id="loan_amount_range">
+                    <div class="loan-labels">
+                        <label>1L</label> <label>25L</label> <label>50L</label> <label>75L</label> <label>1CR</label>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Interest Rate -->
+            <div class="left-sec">
+                <div class="first-left-sec">
+                    <label class="loan-label">Interest Rate (%)</label>
+                    <input type="text" id="interest_rate" value="7.5" onkeypress="return event.charCode >= 48 && event.charCode <= 57 || event.charCode == 46" maxlength="5" class="ms-2">
+                </div>
+                <div class="sec-left-sec">
+                    <input type="range" class="loan-amount" value="7.5" min="1" max="20" step="0.1" id="interest_rate_range">
+                    <div class="loan-labels">
+                        <label>4%</label> <label>8%</label> <label>12%</label> <label>16%</label> <label>20%</label>
+                        <label>24%</label>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Loan Tenure -->
+            <div class="left-sec">
+                <div class="first-left-sec">
+                    <label class="loan-label">Loan Tenure (yrs)</label>
+                    <input type="text" id="loan_tenure" value="20" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="2" class="ms-2">
+                </div>
+                <div class="sec-left-sec">
+                    <input type="range" class="loan-amount" value="20" min="1" max="30" id="loan_tenure_range">
+                    <div class="loan-labels">
+                        <label>5Y</label> <label>10Y</label> <label>15Y</label> <label>20Y</label> <label>25Y</label>
+                        <label>30Y</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="right-calc">
+            <!-- EMI Result Display -->
+            <div class="emi-container">
+                <div class="chart">
+                    <div class="emi-value">
+                        <p>Loan EMI</p>
+                        <h2 id="emi_value">0</h2>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item"><span class="interest-color"></span> Interest Amount</div>
+                    <div class="legend-item"><span class="principal-color"></span> Principal Amount</div>
+                </div>
+            </div>
+    
+            <!-- EMI Breakdown Table -->
+            <div class="table-emi">
+                <div class="table-row" style="background-color: #0f63ac1a;">
+                    <label>Loan EMI</label>
+                    <label id="emi_result">0</label>
+                </div>
+                <div class="table-row">
+                    <label>Principal Amount</label>
+                    <label id="principal_result">0</label>
+                </div>
+                <div class="table-row">
+                    <label>Interest Amount</label>
+                    <label id="interest_result">0</label>
+                </div>
+                <div class="table-row">
+                    <label>Total Payable Amount</label>
+                    <label id="total_result">0</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="emi-use">
+        <p id="use">How to Use SRI IDT EMI Calculator ?</p>
+        <p id="usetext">SRI IDT EMI Calculator is easy, intuitive, and instantaneous. Calculate the EMI for your Home Loan, Car loan, Personal Loan, Education Loan, or any other fully amortising loan using our EMI Calculator.</p>
+        <p id="use-all">All you need to do is enter the following information in the EMI Calculator:</p>
+        <ul id="emi-list">
+            <li>The loan amount you wish to avail (in rupees)</li>
+            <li>The term of your loan (in months or years)</li>
+            <li>The rate of interest (in percentage)</li>
+        </ul>
+        <p id="use-text">Use the slider to adjust the values in the EMI Calculator form or enter the values directly in their relevant boxes. Andromeda’s EMI Calculator will re-calculate your EMI accordingly, and present the information in a pie chart depicting the break-up of your total payment. i.e. Total Principal Payable vs. Total Interest Payable.</p>
+    </div>
+    <div class="inst">
+        <div class="left">
+            <img src="assets/EMI-Calculator-img.svg" alt="">
+        </div>
+        <div class="right">
+            <p>Get Instant approvals on home loans</p>
+            <p>With interest rates as low as 8.50% p.a., and a repayment tenure of up to 30 years.</p>
+        </div>
+    </div>
+    <div class="faq-emi">
+        <div class="faq-left">
+            Frequently Asked <br>Questions
+            
+        </div>
+        <div class="faq-right">
+            <p>What is an EMI ?</p>
+            <hr>
+            <p>What is a Loan Repayment Schedule ?</p>
+            <hr>
+            <p>What is Floating Rate EMI Calculation ?</p>
+            <hr>
+        </div>
+    </div>
+    <div class="footer-calc">
+        <div class="footer-wrapper">
+            <div class="first">
+                <img id="logo-img-first" src="assets/logo-light.png.png" alt="">
+                <p id="patent">Patent No. : 202411063673</p>
+                <p id="downloadapp">Download Shoofna Mobile App and start your earning now!</p>
+                <img id="logo-img-second" src="assets/download.png" alt="">
+            </div>
+            <div class="second">
+                <p id="second-service">Services</p>
+                <div class="underline"></div>
+                <div class="second-text">
+                    <img id="arrow" src="assets/arrow.png" alt="arrow">
+                    <p id="arrowtext" >Home Loan</p>
+                </div>
+                <div class="second-text">
+                    <img id="arrow" src="assets/arrow.png" alt="arrow">
+                    <p id="arrowtext">Property Loan</p>
+                </div>
+                <div class="second-text">
+                    <img id="arrow" src="assets/arrow.png" alt="arrow">
+                    <p id="arrowtext">Business Loan</p>
+                </div>
+                <div class="second-text">
+                    <img id="arrow" src="assets/arrow.png" alt="arrow">
+                    <p id="arrowtext">Personal Loan</p>
+                </div>
+                <div class="second-text">
+                    <img id="arrow" src="assets/arrow.png" alt="arrow">
+                    <p id="arrowtext">All Type Insurance</p>
+                </div>
+            </div>
+            <div class="second">
+                <p id="second-service">Company</p>
+                <div class="underline"></div>
+                <div class="second-text">
+                    <img id="arrow" src="assets/arrow.png" alt="arrow">
+                    <p id="arrowtext" >About Us</p>
+                </div>
+                <div class="second-text">
+                    <img id="arrow" src="assets/arrow.png" alt="arrow">
+                    <p id="arrowtext">Career</p>
+                </div>
+                <div class="second-text">
+                    <img id="arrow" src="assets/arrow.png" alt="arrow">
+                    <p id="arrowtext">Privacy Policy</p>
+                </div>
+                <div class="second-text">
+                    <img id="arrow" src="assets/arrow.png" alt="arrow">
+                    <p id="arrowtext">Terms & Conditions</p>
+                </div>
+            </div>
+            <div class="third">
+                <p id="second-service">Contact Us</p>
+                <div class="underline"></div>
+                <div class="second-text">
+                    <p id="arrowtext">FF-72 Ansal Fortune Arcade Sec 18,Gautam Budh Nagar,Noida(U.P.) India</p>
+                </div>
+                <div class="second-text">
+                    <i class="fa-solid fa-phone" style="color: #BBB7C2;"></i>
+                    <p id="arrowtext">1800-572-7277(Toll Free)</p>
+                </div>
+                <div class="second-text">
+                    <i class="fa-solid fa-envelope" style="color: #BBB7C2;"></i>
+                    <p id="arrowtext">appgrome@gmail.com</p>
+                </div>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f" style="color: #ffffff;"></i>
+                    <i class="fab fa-twitter" style="color: #ffffff;"></i>
+                    <i class="fab fa-instagram" style="color: #ffffff;"></i>
+                    <i class="fab fa-linkedin-in" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="last">
+        <p>Copyright by Shoofna Revolution India Ltd &copy; 2024. All rights reserved</p>
+     </div>
+     <script src="emi.js"></script>
+</body>
+</html>

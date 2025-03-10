@@ -87,3 +87,5 @@ function toggleFAQ(element) {
         arrow.style.transform = "rotate(180deg)";
     }
 }
+
+

@@ -1,0 +1,330 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.banner{
+    /* background-color: orange; */
+    width:100%;
+    height:300px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner h1{
+    color:#000;
+    font-weight: 700;
+    font-size: 82.7px;
+}
+
+.banner p{
+    margin-top: -40px;
+    font-weight: 400;
+    size: 20.6px;
+}
+
+.calc{
+    width:100%;
+    height:400px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.left-calc{
+    width:35%;
+    height:100%;
+    /* background-color: red; */
+}
+
+
+.emi-use{
+    width:100%;
+    height:564px;
+    margin-top:200px;
+}
+
+#use{
+    text-align: center;
+    font-size: 41.1px;
+    font-weight: 900;
+    color:#0F63AC
+}
+
+#usetext{
+    text-align: center;
+    padding-left:330px;
+    padding-right: 330px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+#use-text{
+    /* text-align: center; */
+    padding-left:200px;
+    padding-right: 330px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+#use-all{
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 40px;
+    line-height: 29px;
+}
+
+#emi-list{
+    /* line-height: 29px; */
+    padding-left:220px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+.inst{
+    background-color: #0F63AC0D;
+    width:100%;
+    height:392.78px;
+    display: flex;
+}
+
+.left{
+    width:40%;
+    height: 100%;
+    display: flex;
+    /* background-color: blue; */
+    justify-content: right;
+    align-items: center;
+}
+
+.left img{
+    width:450px;
+    height:300px;
+}
+
+.right{
+    width:60%;
+    height:100%;
+}
+
+.faq-emi{
+    width:100%;
+    /* background-color: blue; */
+    height: 174px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-left{
+    width:37%;
+    height:100%;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-start;
+    font-weight: 700;
+    font-size: 45px;
+    color:#0F63AC;
+}
+
+.faq-right{
+    width:58%;
+    /* background-color: green; */
+    height:100%;
+}
+
+.footer-calc{
+    background-color: #151D35;
+    margin-top: 20px;
+    width: 100%;
+    height:430.98px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* extra */
+.left-calc{
+    display:flex;
+    flex-direction: column;
+}
+.left-sec{
+    flex:1;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+}
+.first-left-sec{
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 28px;
+    padding-right: 28px;
+    box-sizing: border-box;
+    flex:1;
+}
+
+.loan-amount{
+    width:90%;
+}
+
+.loan-labels{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+}
+.sec-left-sec{
+    /* background-color: gold; */
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#interest_rate{
+    width:100px;
+    height:39px;
+    text-align: center;
+    border:1px solid #0F63AC; 
+    border-radius: 5px;   
+    font-size: 16.9px;
+    font-weight: 400;
+
+}
+#loan_tenure{
+    width:100px;
+    height:39px;
+    text-align: center;
+    border:1px solid #0F63AC;    
+    font-size: 16.9px;
+    font-weight: 400;
+    border-radius: 5px;
+
+}
+#loan_amount{
+    width:100px;
+    height:39px;
+    text-align: center;
+    border:1px solid #0F63AC;    
+    font-size: 16.9px;
+    font-weight: 400;
+
+}
+
+.loan-label{
+    font-size: 19.9px;
+    font-weight: 700;
+}
+
+.right-calc{
+    width:50%;
+    height:90%;
+    /* background-color: blue; */
+    display:flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.emi-container {
+    text-align: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 2px solid #E5E5E5;
+    flex:1;
+    /* background-color: red; */
+}
+
+.table-emi{
+    margin:15px;
+    flex:1;
+    /* background-color: red; */
+}
+
+.table-row{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right:15px;
+    padding-top:7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #E5E5E5;
+}
+.chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#14589C 0% 30%, #E5E5E5 30% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    position: relative;
+}
+
+.chart::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.emi-value {
+    position: absolute;
+    text-align: center;
+}
+
+.emi-value p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.emi-value h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.legend {
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.legend-item span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.interest-color {
+    background: #14589C;
+}
+
+.principal-color {
+    background: #E5E5E5;
+}
